@@ -1,5 +1,5 @@
-Package: com.axs.immortalizerjailed
-Name: ImmortalizerJailed
+Package: com.axs.zimmortalizerjailed
+Name: ZImmortalizerJailed
 Version: 1.2.0
 Architecture: iphoneos-arm64
 Description: A tweak that keeps apps alive
@@ -7,3 +7,5 @@ Maintainer: Axs
 Author: Axs
 Section: 微信插件
 Depends: mobilesubstrate
+Icon: https://axs66.github.io/repo/icon/wechat.png
+Sileodepiction: https://axs66.github.io/repo/sileodepiction/zimmortalizerjailed/js.json
