@@ -3,7 +3,7 @@
 
 即使在后台，也能让您的应用无限期地运行在前台！
 
-**对于 iOS 14 及以上版本, [download here](https://github.com/sergealagon/ImmortalizerJailed/releases/)**
+**对于 iOS 14 及以上版本, [请点此下载](https://github.com/axs66/ZImmortalizerJailed/releases/)**
 
 _这是无需越狱或 TrollStore 即可注入任何 IPA 的 Immortalizer tweak 的监禁版本!**_
 
