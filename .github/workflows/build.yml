@@ -1,6 +1,11 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    tags-ignore:
+      - '*'  # 忽略 tag 推送触发，避免发布 release 时死循环构建
 
 jobs:
   build:
@@ -40,7 +45,7 @@ jobs:
           VERSION=$(date +v%Y%m%d%H%M)
           gh release create $VERSION ${{ github.workspace }}/packages/*.deb --title "ZImmortalizerJailed $VERSION" --notes "Automated release of .deb files"
         env:
-          GH_TOKEN: ${{ secrets.PAT }}  # 这里设置了 GitHub Token 用于授权
+          GH_TOKEN: ${{ secrets.PAT }}
 
       - name: Upload specific Deb packages
         uses: actions/upload-artifact@v4.3.3
