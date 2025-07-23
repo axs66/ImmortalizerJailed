@@ -1,62 +1,49 @@
 name: CI
 
-on:
-  push:
-    branches: [ main ]
-    paths:
-      - '.github/workflows/build.yml'
-  workflow_dispatch:
+on: [push]
 
 jobs:
   build:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           submodules: true
 
-      - name: Setup Theos environment
+      - name: Check cache
+        run: |
+          echo upstream_heads=theos_version_commit-sdks_version_commit >> $GITHUB_ENV
+
+      - name: Use cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/theos
+          key: ${{ runner.os }}-theos-sdk-version
+
+      - name: Prepare Theos
         uses: axs66/theos-action@main
 
-      - name: Clone Cephei repo
+      - name: Build package
         run: |
-          rm -rf Cephei
-          git clone --depth=1 https://github.com/hbang/libcephei.git Cephei
-
-      - name: Build Cephei static libraries only
-        run: |
-          cd Cephei
-          make clean
-          make -C prefs libCepheiPrefs.a
-
-          # 复制静态库到 lib 目录供主项目链接
-          mkdir -p lib
-          cp prefs/.theos/obj/debug/arm64/libCepheiPrefs.a lib/ || true
-          cp .theos/obj/debug/arm64/libCephei.a lib/ || true
-          cp .theos/obj/debug/arm64/libCepheiSpringBoard.a lib/ || true
-
-      - name: Clean previous packages
-        run: rm -f ${{ github.workspace }}/packages/*.deb
-
-      - name: Build tweak and bundle packages
-        run: |
+          rm -f ${{ github.workspace }}/packages/*.deb
           make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=roothide
 
-      - name: List generated DEBs
-        run: ls -lh ${{ github.workspace }}/packages
+      - name: List generated Deb packages
+        run: ls ${{ github.workspace }}/packages
 
       - name: Create GitHub Release
-        if: github.event_name == 'push'
+        id: release
         run: |
-          VERSION=$(date +v%Y%m%d%H%M)
-          gh release create $VERSION ${{ github.workspace }}/packages/*.deb --title "ImmortalizerJailed $VERSION" --notes "自动构建 .deb 安装包"
+          VERSION=V1.2.0
+          gh release create $VERSION ${{ github.workspace }}/packages/*.deb --title "ImmortalizerJailed $VERSION" --notes "Automated release of .deb files"
         env:
-          GH_TOKEN: ${{ secrets.PAT }}
+          GH_TOKEN: ${{ secrets.PAT }}  # 这里设置了 GitHub Token 用于授权
 
-      - name: Upload DEB to workflow artifacts
-        uses: actions/upload-artifact@v4
+      - name: Upload specific Deb packages
+        uses: actions/upload-artifact@v4.3.3
         with:
           name: ImmortalizerJailed
           path: ${{ github.workspace }}/packages/*.deb
