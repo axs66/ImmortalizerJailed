@@ -1,5 +1,5 @@
 
-# ImmortalizerJailed
+# ZImmortalizerJailed
 
 即使在后台，也能让您的应用无限期地运行在前台！
 
