@@ -29,11 +29,11 @@ jobs:
         run: |
           cd Cephei
           make clean
-          make CepheiPrefs  # <-- 避免 build framework
+          make -C prefs libCepheiPrefs.a
 
           # 复制静态库到 lib 目录供主项目链接
           mkdir -p lib
-          cp .theos/obj/debug/arm64/libCepheiPrefs.a lib/ || true
+          cp prefs/.theos/obj/debug/arm64/libCepheiPrefs.a lib/ || true
           cp .theos/obj/debug/arm64/libCephei.a lib/ || true
           cp .theos/obj/debug/arm64/libCepheiSpringBoard.a lib/ || true
 
