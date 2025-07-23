@@ -1,0 +1,9 @@
+Package: com.axs.immortalizerjailed
+Name: ImmortalizerJailed
+Version: 1.2.0
+Architecture: iphoneos-arm64
+Description: A tweak that keeps apps alive
+Maintainer: Axs
+Author: Axs
+Section: 微信插件
+Depends: mobilesubstrate
