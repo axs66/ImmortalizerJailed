@@ -1,20 +1,20 @@
 
 # ImmortalizerJailed
 
-Keep your apps running in the foreground indefinitely, even if they are in the background!
+即使在后台，也能让您的应用无限期地运行在前台！
 
-**For iOS 14 and above, [download here](https://github.com/sergealagon/ImmortalizerJailed/releases/)**
+**对于 iOS 14 及以上版本, [download here](https://github.com/sergealagon/ImmortalizerJailed/releases/)**
 
-_This is the jailed version of the tweak [Immortalizer](https://github.com/sergealagon/Immortalizer) that can be injected on any IPA, **without the need of jailbreak or TrollStore!**_
+_这是无需越狱或 TrollStore 即可注入任何 IPA 的 Immortalizer tweak 的监禁版本!**_
 
 ### Installation
-1. No need for jailbreak or TrollStore, so all you have to do is inject the dylib to an IPA you want this to work.
-2. You may use any tools like **Sideloadly**, **E-Sign**, or even **TrollFools** to inject the dylib to an app.
+1. 无需越狱或 TrollStore，您只需将 dylib 注入您想要使用的 IPA 即可。
+2. 您可以使用 Sideloadly、E-Sign 或 TrollFools 等任何工具将 dylib 注入应用程序。
 
 ### Details
-- Just like the tweak, it can make apps stay in the foreground, however, you need to inject this onto the app you want to immortalize. 
-- There would be a **floating movable button** that you can press to toggle Immortalizer
-- Just like the TrollStore version, there's no way to force notifications. It's a bit tricky to force notifications to show, especially for apps that render their own notification UI when their app is opened (e.g. WhatsApp).
+- 就像这个调整一样，它可以让你的应用保持在前台，但是你需要将这个功能注入到你想要让它永驻前台的应用中。
+- 会有一个可以拖动的浮动按钮，你可以点击它来切换 Immortalizer 的状态。
+- 就像 TrollStore 版本一样，没有办法强制显示通知。对于那些在应用打开时自定义通知 UI 的应用（例如 WhatsApp），强制显示通知会稍微复杂一些。
 
 # License
     Copyright (C) 2025  Serge Alagon
