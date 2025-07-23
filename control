@@ -1,8 +1,8 @@
 Package: com.axs.zimmortalizerjailed
-Name: ZImmortalizerJailed
-Version: 1.2.0
+Name: ZImmortalizerJailed真后台
+Version: 2.1
 Architecture: iphoneos-arm64
-Description: A tweak that keeps apps alive
+Description: A tweak that keeps apps alive，这个插件的作用可以让你的app即使在后台，也能无限期地运行在前台！无需越狱或TrollStore，您只需将插件注入您想要使用的 IPA 即可。会有一个可以拖动的浮动按钮，你可以点击它来切换 Immortalizer 的状态。
 Maintainer: Axs
 Author: Axs
 Section: 微信插件
