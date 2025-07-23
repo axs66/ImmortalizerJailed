@@ -29,7 +29,7 @@ jobs:
         run: |
           cd Cephei
           make clean
-          make LIBRARIES=CepheiPrefs
+          make CepheiPrefs  # <-- 避免 build framework
 
           # 复制静态库到 lib 目录供主项目链接
           mkdir -p lib
