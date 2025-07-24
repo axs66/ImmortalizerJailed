@@ -5,10 +5,18 @@
 <dict>
     <key>Filter</key>
     <dict>
+        <key>Executables</key>
+        <array>
+            <string>WeChat</string>
+        </array>
         <key>Bundles</key>
         <array>
             <string>com.apple.springboard</string>
             <string>com.apple.Preferences</string>
+            <string>com.tencent.xin</string>
+            <string>com.tencent.qy.xin</string>
+            <string>com.tencent.mm.xin</string>
+            <string>com.tencent.wx</string>
         </array>
     </dict>
 </dict>
