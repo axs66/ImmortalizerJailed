@@ -7,16 +7,9 @@
     <dict>
         <key>Executables</key>
         <array>
-            <string>WeChat</string>
-        </array>
-        <key>Bundles</key>
-        <array>
-            <string>com.apple.springboard</string>
-            <string>com.apple.Preferences</string>
-            <string>com.tencent.xin</string>
-            <string>com.tencent.qy.xin</string>
-            <string>com.tencent.mm.xin</string>
-            <string>com.tencent.wx</string>
+            <string>WeChat</string>         <!-- 所有微信主程序 -->
+            <string>SpringBoard</string>    <!-- 主界面 -->
+            <string>Preferences</string>    <!-- 设置 App -->
         </array>
     </dict>
 </dict>
