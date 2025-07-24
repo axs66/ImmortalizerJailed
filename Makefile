@@ -7,8 +7,8 @@ ARCHS = arm64
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = ZImmortalizerJailed
+TWEAK_NAME = ImmortalizerJailed
 
-ZImmortalizerJailed_FILES = main.m CustomToastView.m FloatingButtonWindow.m
-ZImmortalizerJailed_CFLAGS = -fobjc-arc -fcommon -Wno-error
+ImmortalizerJailed_FILES = main.m CustomToastView.m FloatingButtonWindow.m
+ImmortalizerJailed_CFLAGS = -fobjc-arc -fcommon -Wno-error
 include $(THEOS_MAKE_PATH)/tweak.mk
