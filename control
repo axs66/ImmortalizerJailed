@@ -1,11 +1,11 @@
-Package: com.axs.zimmortalizerjailed
-Name: ZImmortalizerJailed真后台
-Version: 2.1
+Package: com.axs.immortalizerjailed
+Name: ImmortalizerJailed真后台
+Version: 2.2
 Architecture: iphoneos-arm64
 Description: A tweak that keeps apps alive，这个插件的作用可以让你的app即使在后台，也能无限期地运行在前台！无需越狱或TrollStore，您只需将插件注入您想要使用的 IPA 即可。会有一个可以拖动的浮动按钮，你可以点击它来切换 Immortalizer 的状态。
 Maintainer: Axs
-Author: Axs
+Author: A
 Section: 微信插件
 Depends: mobilesubstrate
 Icon: https://axs66.github.io/repo/icon/wechat.png
-Sileodepiction: https://axs66.github.io/repo/sileodepiction/zimmortalizerjailed/js.json
+Sileodepiction: https://axs66.github.io/repo/sileodepiction/immortalizerjailed/js.json
